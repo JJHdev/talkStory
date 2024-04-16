@@ -71,11 +71,6 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USERNAME }}/docker-test-dev -f ./Dockerfile .
           docker push ${{ secrets.DOCKER_USERNAME }}/docker-test-dev
 
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-22.04
-
-    steps:
       - name: Checkout
         uses: actions/checkout@v3
 
